@@ -16,6 +16,14 @@ for(let i = 0; i < dogImages.length; i++){
     dogImages[i].style.transform = "rotate(15deg)"
     dogImages[i].style.border = '2px solid red'
     dogImages[i].style.boxShadow = "0px 0px 30px red"
+    dogImages[i].addEventListener('mouseover', () => {
+        dogImages[i].style.transform = 'scale(1.3)'
+    })
+    dogImages[i].addEventListener('mouseout', () => {
+        dogImages[i].style.transform = 'scale(1)'
+        dogImages[i].style.cursor = 'pointer'
+        dogImages[i].style.transform = "rotate(15deg)"
+    })
 }
 
 let dogNames = document.querySelectorAll('.dog-name')
